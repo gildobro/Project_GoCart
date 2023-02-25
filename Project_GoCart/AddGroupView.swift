@@ -11,7 +11,8 @@ struct AddGroupView: View {
     var body: some View {
         NavigationView {
             ZStack{
-                Color.green
+                Color(red: 0.87, green: 0.94, blue: 0.91)
+
                     .ignoresSafeArea()
             }
             .navigationBarTitle("Add Group Screen")

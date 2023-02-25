@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var groups: [Group] = [.init(name: "Food", imageName: "fork.knife", color: .green),
-                           .init(name:"Medications", imageName: "medical.thermometer.fill", color: .blue),
-                           .init(name:"Cleaning Supplies", imageName: "bubbles.and.sparkles.fill", color: .purple),
-                           .init(name: "Video Games", imageName: "gamecontroller.fill", color: .mint),
-                           .init(name: "Pet Supplies", imageName: "pawprint.fill", color: .red)
+    var groups: [Group] = [.init(name: "Food", imageName: "fork.knife"),
+                           .init(name:"Medications", imageName: "medical.thermometer.fill"),
+                           .init(name:"Cleaning Supplies", imageName: "bubbles.and.sparkles.fill"),
+                           .init(name: "Video Games", imageName: "gamecontroller.fill"),
+                           .init(name: "Pet Supplies", imageName: "pawprint.fill")
     ]
     
     @State private var path: [Group] = []
@@ -46,13 +46,14 @@ struct ContentView: View {
                             ForEach(groups, id: \.name){ group in
                                 NavigationLink(value: group){
                                     Label(group.name, systemImage: group.imageName)
-                                        .foregroundColor(group.color)
+                                        .foregroundColor(.black)
                                 }
                             }
                         }
+                        .scrollContentBackground(.hidden)
+                        .background(Color(red: 0.87, green: 0.94, blue: 0.91))
                     .navigationDestination(for: Group.self){ group in
                         ZStack{
-                            group.color.ignoresSafeArea()
                             Label(group.name, systemImage: group.imageName)
                                 .font(.custom("Noto Sans Oriya Bold", size: 45.0))
 
@@ -94,7 +95,7 @@ struct ContentView: View {
         }
         .frame(width: 130, height: 40, alignment: .center)
         .overlay(RoundedRectangle(cornerRadius: 10).stroke())
-        .font(.custom("Noto Sans Oriya Bold", size: 15))
+        .font(.custom("Noto Sans Oriya Bold", size: 16))
         .background(Color(red: 0.19215686274509805, green: 0.6274509803921569, blue: 0.49019607843137253))
         .cornerRadius(10)
     }
@@ -109,5 +110,5 @@ struct ContentView_Previews: PreviewProvider {
 struct Group: Hashable {
     let name: String
     let imageName: String
-    let color: Color
+//    let color: Color
 }
