@@ -3,6 +3,17 @@
 //  Project_GoCart
 //
 //  Created by Gil on 2023-02-17.
+
+
+/*REFERENCES
+ 
+ FOR DELETING ITEMS FROM LIST
+ https://sarunw.com/posts/swiftui-list-ondelete/
+ 
+ FOR EDITING ITEMS IN LIST
+ https://www.hackingwithswift.com/quick-start/swiftui/how-to-enable-editing-on-a-list-using-editbutton#:~:text=If%20you%20have%20configured%20a,by%20adding%20an%20EditButton%20somewhere.&text=When%20that%20is%20run%2C%20you,the%20items%20in%20the%20list.
+
+ */
 //
 
 import SwiftUI
