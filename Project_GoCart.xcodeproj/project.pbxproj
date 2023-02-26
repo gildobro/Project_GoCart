@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A699F17529AAEBAE00E7BB60 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A699F17429AAEBAE00E7BB60 /* FoodView.swift */; };
+		A699F17729AAEC0300E7BB60 /* MedicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A699F17629AAEC0300E7BB60 /* MedicationView.swift */; };
+		A699F17929AAEC2B00E7BB60 /* CleaningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A699F17829AAEC2B00E7BB60 /* CleaningView.swift */; };
+		A699F17B29AAED8800E7BB60 /* VideoGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A699F17A29AAED8800E7BB60 /* VideoGameView.swift */; };
+		A699F17D29AAEDCB00E7BB60 /* PetSuppliesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A699F17C29AAEDCB00E7BB60 /* PetSuppliesView.swift */; };
+		A699F17F29AAF0AC00E7BB60 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A699F17E29AAF0AC00E7BB60 /* AddItemView.swift */; };
+		A699F18129AB0AD000E7BB60 /* MedicationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A699F18029AB0AD000E7BB60 /* MedicationDetailView.swift */; };
+		A699F18529AB0EFF00E7BB60 /* FoodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A699F18429AB0EFF00E7BB60 /* FoodDetailView.swift */; };
 		A6EF1093299FEC82009B0193 /* Project_GoCartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EF1092299FEC82009B0193 /* Project_GoCartApp.swift */; };
 		A6EF1095299FEC82009B0193 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EF1094299FEC82009B0193 /* ContentView.swift */; };
 		A6EF1097299FEC83009B0193 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6EF1096299FEC83009B0193 /* Assets.xcassets */; };
@@ -17,6 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A699F17429AAEBAE00E7BB60 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
+		A699F17629AAEC0300E7BB60 /* MedicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationView.swift; sourceTree = "<group>"; };
+		A699F17829AAEC2B00E7BB60 /* CleaningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningView.swift; sourceTree = "<group>"; };
+		A699F17A29AAED8800E7BB60 /* VideoGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGameView.swift; sourceTree = "<group>"; };
+		A699F17C29AAEDCB00E7BB60 /* PetSuppliesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSuppliesView.swift; sourceTree = "<group>"; };
+		A699F17E29AAF0AC00E7BB60 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		A699F18029AB0AD000E7BB60 /* MedicationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationDetailView.swift; sourceTree = "<group>"; };
+		A699F18429AB0EFF00E7BB60 /* FoodDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailView.swift; sourceTree = "<group>"; };
 		A6EF108F299FEC82009B0193 /* Project_GoCart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_GoCart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6EF1092299FEC82009B0193 /* Project_GoCartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_GoCartApp.swift; sourceTree = "<group>"; };
 		A6EF1094299FEC82009B0193 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +54,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A699F18229AB0CBB00E7BB60 /* Medication */ = {
+			isa = PBXGroup;
+			children = (
+				A699F17629AAEC0300E7BB60 /* MedicationView.swift */,
+				A699F18029AB0AD000E7BB60 /* MedicationDetailView.swift */,
+				A699F18429AB0EFF00E7BB60 /* FoodDetailView.swift */,
+			);
+			path = Medication;
+			sourceTree = "<group>";
+		};
+		A699F18329AB0CDA00E7BB60 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				A699F17429AAEBAE00E7BB60 /* FoodView.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
 		A6EF1086299FEC82009B0193 = {
 			isa = PBXGroup;
 			children = (
@@ -57,8 +91,14 @@
 		A6EF1091299FEC82009B0193 /* Project_GoCart */ = {
 			isa = PBXGroup;
 			children = (
+				A699F18229AB0CBB00E7BB60 /* Medication */,
 				A6EF1092299FEC82009B0193 /* Project_GoCartApp.swift */,
 				A6EF1094299FEC82009B0193 /* ContentView.swift */,
+				A699F17C29AAEDCB00E7BB60 /* PetSuppliesView.swift */,
+				A699F17A29AAED8800E7BB60 /* VideoGameView.swift */,
+				A699F17829AAEC2B00E7BB60 /* CleaningView.swift */,
+				A699F18329AB0CDA00E7BB60 /* Food */,
+				A699F17E29AAF0AC00E7BB60 /* AddItemView.swift */,
 				A6EF10A429A02565009B0193 /* CalcTaxView.swift */,
 				A6EF10A229A0246C009B0193 /* AddGroupView.swift */,
 				A6EF10A0299FECDF009B0193 /* LaunchView.swift */,
@@ -146,11 +186,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A699F17529AAEBAE00E7BB60 /* FoodView.swift in Sources */,
+				A699F17929AAEC2B00E7BB60 /* CleaningView.swift in Sources */,
+				A699F17B29AAED8800E7BB60 /* VideoGameView.swift in Sources */,
 				A6EF1095299FEC82009B0193 /* ContentView.swift in Sources */,
 				A6EF10A1299FECDF009B0193 /* LaunchView.swift in Sources */,
+				A699F18129AB0AD000E7BB60 /* MedicationDetailView.swift in Sources */,
 				A6EF10A329A0246C009B0193 /* AddGroupView.swift in Sources */,
 				A6EF10A529A02565009B0193 /* CalcTaxView.swift in Sources */,
 				A6EF1093299FEC82009B0193 /* Project_GoCartApp.swift in Sources */,
+				A699F17F29AAF0AC00E7BB60 /* AddItemView.swift in Sources */,
+				A699F18529AB0EFF00E7BB60 /* FoodDetailView.swift in Sources */,
+				A699F17729AAEC0300E7BB60 /* MedicationView.swift in Sources */,
+				A699F17D29AAEDCB00E7BB60 /* PetSuppliesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

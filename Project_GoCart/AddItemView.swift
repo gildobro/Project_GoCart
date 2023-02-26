@@ -9,10 +9,11 @@
 
 import SwiftUI
 
-struct AddGroupView: View {
+struct AddItemView: View {
     @Environment(\.dismiss) var dismiss
     
-    @State var productGroupName: String = ""
+    @State var itemName: String = ""
+    @State var itemPrice: Float = 0.0
     
     var body: some View {
         NavigationView {
@@ -41,11 +42,20 @@ struct AddGroupView: View {
                     Spacer()
                 }
                 VStack{
-                    Text("Product Group Name")
+                    Text("Item Name")
                         .font(.custom("Noto Sans Oriya Bold", size: 20))
                     TextField(
-                        "Product Group Name",
-                        text: $productGroupName
+                        "Item Name",
+                        text: $itemName
+                    )
+                    .padding(.all, 4.0)
+                    .font(.custom("Noto Sans Oriya Bold", size: 20))
+                    .background(Color(.white))
+                    .cornerRadius(10)
+                    TextField(
+                        "Item Price",
+                        value: $itemPrice,
+                        format: .number
                     )
                     .padding(.all, 4.0)
                     .font(.custom("Noto Sans Oriya Bold", size: 20))
@@ -100,8 +110,8 @@ struct AddGroupView: View {
     }
 }
 
-struct AddGroupView_Previews: PreviewProvider {
+struct AddItemView_Previews: PreviewProvider {
     static var previews: some View {
-        AddGroupView()
+        AddItemView()
     }
 }

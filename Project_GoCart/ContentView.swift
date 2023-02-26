@@ -22,20 +22,15 @@ struct ContentView: View {
     
     var groups: [Group] = [.init(name: "Food", imageName: "fork.knife"),
                            .init(name:"Medications", imageName: "medical.thermometer.fill"),
-                           .init(name:"Cleaning Supplies", imageName: "bubbles.and.sparkles.fill"),
+                           .init(name:"Cleaning", imageName: "bubbles.and.sparkles.fill"),
                            .init(name: "Video Games", imageName: "gamecontroller.fill"),
                            .init(name: "Pet Supplies", imageName: "pawprint.fill")
     ]
     
-    @State private var path: [Group] = []
     @State var showModal = false
 
-    
-    
-    
-    
     var body: some View {
-        NavigationStack(path: $path){
+        NavigationStack {
             ZStack{
                 VStack {
                     HStack{
@@ -53,9 +48,10 @@ struct ContentView: View {
                     Text("Product \nGroups")
                         .font(.custom("Noto Sans Oriya Bold", size: 45.0))
                         .foregroundColor(Color(red: 0.19215686274509805, green: 0.6274509803921569, blue: 0.49019607843137253))
+                        .padding()
                         List{
                             ForEach(groups, id: \.name){ group in
-                                NavigationLink(value: group){
+                                NavigationLink(destination: GroupDetailView(group: group)){
                                     Label(group.name, systemImage: group.imageName)
                                         .foregroundColor(.black)
                                 }
@@ -63,13 +59,6 @@ struct ContentView: View {
                         }
                         .scrollContentBackground(.hidden)
                         .background(Color(red: 0.87, green: 0.94, blue: 0.91))
-                    .navigationDestination(for: Group.self){ group in
-                        ZStack{
-                            Label(group.name, systemImage: group.imageName)
-                                .font(.custom("Noto Sans Oriya Bold", size: 45.0))
-
-                        }
-                    }
                     AddGroupButton()
                     CalcTaxButton()
                     
@@ -77,7 +66,6 @@ struct ContentView: View {
             }
         }
     }
-    
     func AddGroupButton() -> some View {
         return Button(action: {
             self.showModal.toggle()
@@ -118,8 +106,36 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct Group: Hashable {
+struct Group: Identifiable, Hashable {
+    let id: UUID
     let name: String
     let imageName: String
-//    let color: Color
+    
+    init(name: String, imageName: String) {
+        self.id = UUID()
+        self.name = name
+        self.imageName = imageName
+    }
 }
+
+struct GroupDetailView: View {
+    let group: Group
+    // MAYBE A DYNAMIC SWITCH CASE FOR WHEN USER ADDS A GROUP
+    var body: some View {
+        switch group.name{
+        case "Food":
+            FoodView()
+        case "Medications":
+            MedicationView()
+        case "Cleaning":
+            CleaningView()
+        case "Video Games":
+            VideoGameView()
+        case "Pet Supplies":
+            PetSuppliesView()
+        default:
+            Text("Page Doesn't Exist")
+        }
+    }
+}
+
