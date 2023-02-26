@@ -81,12 +81,10 @@
 		A6EF1091299FEC82009B0193 /* Project_GoCart */ = {
 			isa = PBXGroup;
 			children = (
+				A6F4AE9F29AC08E2009E71BF /* ButtonViews */,
 				A67A2CD129AB162D00F880AA /* GroupsViews */,
 				A6EF1092299FEC82009B0193 /* Project_GoCartApp.swift */,
 				A6EF1094299FEC82009B0193 /* ContentView.swift */,
-				A699F17E29AAF0AC00E7BB60 /* AddItemView.swift */,
-				A6EF10A429A02565009B0193 /* CalcTaxView.swift */,
-				A6EF10A229A0246C009B0193 /* AddGroupView.swift */,
 				A6EF10A0299FECDF009B0193 /* LaunchView.swift */,
 				A6EF1096299FEC83009B0193 /* Assets.xcassets */,
 				A6EF1098299FEC83009B0193 /* Preview Content */,
@@ -100,6 +98,16 @@
 				A6EF1099299FEC83009B0193 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A6F4AE9F29AC08E2009E71BF /* ButtonViews */ = {
+			isa = PBXGroup;
+			children = (
+				A6EF10A429A02565009B0193 /* CalcTaxView.swift */,
+				A699F17E29AAF0AC00E7BB60 /* AddItemView.swift */,
+				A6EF10A229A0246C009B0193 /* AddGroupView.swift */,
+			);
+			path = ButtonViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

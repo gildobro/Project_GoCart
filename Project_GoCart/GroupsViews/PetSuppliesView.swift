@@ -40,9 +40,8 @@ struct PetSuppliesView: View {
                     Text("Pet Supplies")
                         .font(.custom("Noto Sans Oriya Bold", size: 45.0))
                         .foregroundColor(Color(red: 0.19215686274509805, green: 0.6274509803921569, blue: 0.49019607843137253))
-                        .padding()
+                        .padding(.leading, -40.0)
                         List{
-                            //destination: FoodDetailView(food: food)
                             ForEach(pets, id: \.name){ pet in
                                 NavigationLink(pet.name) {
                                     PetDetailView(pet: pet)
@@ -53,11 +52,6 @@ struct PetSuppliesView: View {
                         .background(Color(red: 0.87, green: 0.94, blue: 0.91))
                     AddItemButton()
                 }
-//                AddItemButton()
-//                VStack{
-//                    Spacer()
-//                    AddItemButton()
-//                }
             }
         }
     }

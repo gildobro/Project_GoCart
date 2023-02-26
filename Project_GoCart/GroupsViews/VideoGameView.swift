@@ -40,7 +40,7 @@ struct VideoGameView: View {
                     Text("Video Games")
                         .font(.custom("Noto Sans Oriya Bold", size: 45.0))
                         .foregroundColor(Color(red: 0.19215686274509805, green: 0.6274509803921569, blue: 0.49019607843137253))
-                        .padding()
+                        .padding(.trailing, 40.0)
                         List{
                             //destination: FoodDetailView(food: food)
                             ForEach(games, id: \.name){ game in
