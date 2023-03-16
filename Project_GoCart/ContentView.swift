@@ -20,6 +20,9 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @Environment(\.managedObjectContext) var context
+    @FetchRequest(entity: Groups.entity(), sortDescriptors: []) var groups: FetchedResults<Groups>
+    
     var groups: [Group] = [.init(name: "Food", imageName: "fork.knife"),
                            .init(name:"Medications", imageName: "medical.thermometer.fill"),
                            .init(name:"Cleaning", imageName: "bubbles.and.sparkles.fill"),
