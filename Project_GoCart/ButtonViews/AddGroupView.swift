@@ -11,8 +11,11 @@ import SwiftUI
 
 struct AddGroupView: View {
     @Environment(\.dismiss) var dismiss
+    @Environment(\.managedObjectContext) var context
+
     
     @State var productGroupName: String = ""
+    @State private var newGroupName = ""
     
     var body: some View {
         NavigationView {
@@ -45,7 +48,7 @@ struct AddGroupView: View {
                         .font(.custom("Noto Sans Oriya Bold", size: 20))
                     TextField(
                         "Product Group Name",
-                        text: $productGroupName
+                        text: $newGroupName
                     )
                     .padding(.all, 4.0)
                     .font(.custom("Noto Sans Oriya Bold", size: 20))
@@ -89,6 +92,8 @@ struct AddGroupView: View {
     
     func AddButton() -> some View {
         return Button("Add") {
+            let newGroup = Groups(context: self.context)
+            newGroup.name = newGroupName
             dismiss()
         }
         .bold()

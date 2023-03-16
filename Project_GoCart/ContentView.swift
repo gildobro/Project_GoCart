@@ -23,12 +23,12 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var context
     @FetchRequest(entity: Groups.entity(), sortDescriptors: []) var groups: FetchedResults<Groups>
     
-    var groups: [Group] = [.init(name: "Food", imageName: "fork.knife"),
-                           .init(name:"Medications", imageName: "medical.thermometer.fill"),
-                           .init(name:"Cleaning", imageName: "bubbles.and.sparkles.fill"),
-                           .init(name: "Video Games", imageName: "gamecontroller.fill"),
-                           .init(name: "Pet Supplies", imageName: "pawprint.fill")
-    ]
+//    var groups: [Group] = [.init(name: "Food", imageName: "fork.knife"),
+//                           .init(name:"Medications", imageName: "medical.thermometer.fill"),
+//                           .init(name:"Cleaning", imageName: "bubbles.and.sparkles.fill"),
+//                           .init(name: "Video Games", imageName: "gamecontroller.fill"),
+//                           .init(name: "Pet Supplies", imageName: "pawprint.fill")
+//    ]
     
     @State var showModal = false
 
@@ -52,15 +52,19 @@ struct ContentView: View {
                         .font(.custom("Noto Sans Oriya Bold", size: 45.0))
                         .foregroundColor(Color(red: 0.19215686274509805, green: 0.6274509803921569, blue: 0.49019607843137253))
                         .padding()
-                        List{
-                            ForEach(groups, id: \.name){ group in
-                                NavigationLink(destination: GroupDetailView(group: group)){
-                                    Label(group.name, systemImage: group.imageName)
-                                        .foregroundColor(.black)
-                                }
-                            }
+//                        List{
+//                            ForEach(groups, id: \.name){ group in
+//                                NavigationLink(destination: GroupDetailView(group: group)){
+//                                    Label(group.name, systemImage: group.imageName)
+//                                        .foregroundColor(.black)
+//                                }
+//                            }
+//                        }
+                    List{
+                        ForEach(groups, id: \.self){ group in
+                            Text("\(group.name!)")
                         }
-                        .scrollContentBackground(.hidden)
+                    }                        .scrollContentBackground(.hidden)
                         .background(Color(red: 0.87, green: 0.94, blue: 0.91))
                     AddGroupButton()
                     CalcTaxButton()
