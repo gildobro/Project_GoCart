@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Project_GoCartApp: App {
+    let persistenceController = PersistenceController.shared
+
     var body: some Scene {
         WindowGroup {
             LaunchView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

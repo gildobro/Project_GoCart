@@ -8,13 +8,17 @@
 //
 
 import SwiftUI
+import CoreData
+
 
 struct AddGroupView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.managedObjectContext) var context
+    
+    @FetchRequest(entity: Groups.entity(), sortDescriptors: [])
+    var groups: FetchedResults<Groups>
 
     
-    @State var productGroupName: String = ""
     @State private var newGroupName = ""
     
     var body: some View {
@@ -94,6 +98,7 @@ struct AddGroupView: View {
         return Button("Add") {
             let newGroup = Groups(context: self.context)
             newGroup.name = newGroupName
+            try? self.context.save()
             dismiss()
         }
         .bold()

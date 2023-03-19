@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A63D5AB829C3F14400FC4995 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63D5AB729C3F14400FC4995 /* PersistenceController.swift */; };
 		A64B208D29C39749004D8115 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64B208C29C39749004D8115 /* CoreData.framework */; };
 		A64B209129C39789004D8115 /* GroupModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A64B208F29C39789004D8115 /* GroupModels.xcdatamodeld */; };
 		A699F17529AAEBAE00E7BB60 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A699F17429AAEBAE00E7BB60 /* FoodView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A63D5AB729C3F14400FC4995 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		A64B208C29C39749004D8115 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A64B209029C39789004D8115 /* GroupModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GroupModels.xcdatamodel; sourceTree = "<group>"; };
 		A699F17429AAEBAE00E7BB60 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				A67A2CD129AB162D00F880AA /* GroupsViews */,
 				A6EF1092299FEC82009B0193 /* Project_GoCartApp.swift */,
 				A6EF1094299FEC82009B0193 /* ContentView.swift */,
+				A63D5AB729C3F14400FC4995 /* PersistenceController.swift */,
 				A6EF10A0299FECDF009B0193 /* LaunchView.swift */,
 				A6EF1096299FEC83009B0193 /* Assets.xcassets */,
 				A6EF1098299FEC83009B0193 /* Preview Content */,
@@ -213,6 +216,7 @@
 				A6EF10A529A02565009B0193 /* CalcTaxView.swift in Sources */,
 				A6EF1093299FEC82009B0193 /* Project_GoCartApp.swift in Sources */,
 				A699F17F29AAF0AC00E7BB60 /* AddItemView.swift in Sources */,
+				A63D5AB829C3F14400FC4995 /* PersistenceController.swift in Sources */,
 				A699F17729AAEC0300E7BB60 /* MedicationView.swift in Sources */,
 				A699F17D29AAEDCB00E7BB60 /* PetSuppliesView.swift in Sources */,
 			);

@@ -17,6 +17,8 @@
 //
 
 import SwiftUI
+import CoreData
+
 
 struct ContentView: View {
     
@@ -145,4 +147,37 @@ struct GroupDetailView: View {
         }
     }
 }
+
+//struct Group: Identifiable, Hashable {
+//    let id: UUID
+//    let name: String
+//    let imageName: String
+//
+//    init(name: String, imageName: String) {
+//        self.id = UUID()
+//        self.name = name
+//        self.imageName = imageName
+//    }
+//}
+//
+//struct GroupDetailView: View {
+//    let group: Group
+//    // MAYBE A DYNAMIC SWITCH CASE FOR WHEN USER ADDS A GROUP
+//    var body: some View {
+//        switch group.name{
+//        case "Food":
+//            FoodView()
+//        case "Medications":
+//            MedicationView()
+//        case "Cleaning":
+//            CleaningView()
+//        case "Video Games":
+//            VideoGameView()
+//        case "Pet Supplies":
+//            PetSuppliesView()
+//        default:
+//            Text("Page Doesn't Exist")
+//        }
+//    }
+//}
 
