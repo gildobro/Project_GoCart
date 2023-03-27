@@ -3,6 +3,8 @@
 //  Project_GoCart
 //
 //  Created by Gil on 2023-02-17.
+//  Created by Gil Dobrovinsky 101304972 on 2023-03-16.
+
 // REFERENCE
 // https://developer.apple.com/documentation/swiftui/textfield
 //
@@ -19,7 +21,7 @@ struct AddGroupView: View {
     var groups: FetchedResults<Groups>
 
     
-    @State private var newGroupName = ""
+    @State public var newGroupName = ""
     
     var body: some View {
         NavigationView {
